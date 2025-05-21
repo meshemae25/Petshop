@@ -46,7 +46,7 @@ $products = [
 // Helper functions to replace Laravel's route() helper
 function route($name, $params = null) {
     $routes = [
-        'home' => 'index.php',
+        'home' => 'home.php',
         'shop' => 'shop.php',
         'about' => 'about.php',
         'contact' => 'contact.php',
@@ -850,7 +850,7 @@ function get_cart_count() {
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo route('home'); ?>">
+                <a class="navbar-brand" href="<?php echo route('home.php'); ?>">
                     <img src="<?php echo asset('images/pawshop-logo.png'); ?>" alt="PawShop Logo" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -859,16 +859,16 @@ function get_cart_count() {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link <?php echo request_is('home') ? 'active' : ''; ?>" href="<?php echo route('home'); ?>">Home</a>
+                            <a class="nav-link <?php echo request_is('home.php') ? 'active' : ''; ?>" href="<?php echo route('home'); ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo request_is('shop') ? 'active' : ''; ?>" href="<?php echo route('shop'); ?>">Shop</a>
+                            <a class="nav-link <?php echo request_is('shop.php') ? 'active' : ''; ?>" href="<?php echo route('shop'); ?>">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo request_is('about') ? 'active' : ''; ?>" href="<?php echo route('about'); ?>">About Us</a>
+                            <a class="nav-link <?php echo request_is('about.php') ? 'active' : ''; ?>" href="<?php echo route('about'); ?>">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo request_is('contact') ? 'active' : ''; ?>" href="<?php echo route('contact'); ?>">Contact Us</a>
+                            <a class="nav-link <?php echo request_is('contact.php') ? 'active' : ''; ?>" href="<?php echo route('contact'); ?>">Contact Us</a>
                         </li>
                     </ul>
                 </div>

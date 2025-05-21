@@ -12,7 +12,7 @@ function asset($path) {
 function route($name, $params = null) {
     // Simple router function - in a real app you'd have proper routing
     $routes = [
-        'home' => 'index.php',
+        'home' => 'home.php',
         'shop' => 'shop.php',
         'about' => 'about.php',
         'contact' => 'contact.php',
@@ -524,7 +524,7 @@ $discount = isset($_SESSION['discount']) ? $_SESSION['discount'] : 0;
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo route('home'); ?>">
+                <a class="navbar-brand" href="<?php echo route('home.php'); ?>">
                     <img src="<?php echo asset('images/pawshop-logo.png'); ?>" alt="PawShop Logo" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
